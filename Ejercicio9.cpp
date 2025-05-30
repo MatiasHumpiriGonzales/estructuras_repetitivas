@@ -2,21 +2,25 @@
 using namespace std;
 int main() {
     int n;
-    int digitos = 0;
+    int digitosPares = 0;
     cout << "Ingresa un numero entero: ";
     cin >> n;
+    if (n < 0) {
+        n = -n;
+    }
     if (n == 0) {
-        digitos = 1;
+        digitosPares = 1; 
     } else {
-        if (n < 0) {
-            n = -n;
-        }
         while (n > 0) {
-            n = n / 10;
-            digitos++;
+            int digito = n % 10; 
+            if (digito % 2 == 0) {
+                digitosPares++;
+            }
+            n = n / 10; 
         }
     }
-    cout << "El numero tiene " << digitos << " digitos." << endl;
+    cout << "El numero tiene " << digitosPares << " dígito(s) par(es)." << endl;
     return 0;
 }
+
 
