@@ -5,7 +5,7 @@ int main (){
 	cout << "Indique los 'n' digitos a sumar: ";
 	cin >> n;
 	suma = 0;
-	for (int i = 1; i <= n; i++ ){
+	for (int i = 1; i <= n; i = i + 2 ){
 		suma = suma + i;
 }
 	cout << suma;
