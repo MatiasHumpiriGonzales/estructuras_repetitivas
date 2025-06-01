@@ -5,7 +5,7 @@ int main() {
     cout << "Introduce números positivos: " << endl;
     while (true) {
         cin >> numero;
-        if (numero < 0) {
+        if (numero == 0) {
             break; 
         }
     }
